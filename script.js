@@ -19,6 +19,26 @@ if (menuToggle && mainNav) {
 }
 
 // =========================
+// Active Nav Link
+// =========================
+function normalizePath(pathname) {
+  if (!pathname || pathname === "/") {
+    return "index.html";
+  }
+
+  const clean = pathname.split("/").pop() || "index.html";
+  return clean.toLowerCase();
+}
+
+const currentPage = normalizePath(window.location.pathname);
+document.querySelectorAll(".main-nav a").forEach((link) => {
+  const href = (link.getAttribute("href") || "").toLowerCase();
+  if (href === currentPage) {
+    link.classList.add("active");
+  }
+});
+
+// =========================
 // Footer Year
 // =========================
 const yearElement = document.getElementById("year");
@@ -27,19 +47,21 @@ if (yearElement) {
 }
 
 // =========================
-// Contact Form Demo Message
+// Form Submission Demo
 // =========================
-const estimateForm = document.getElementById("estimate-form");
-const formNote = document.getElementById("form-note");
-
-if (estimateForm && formNote) {
-  estimateForm.addEventListener("submit", (event) => {
+document.querySelectorAll(".js-estimate-form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
-    formNote.textContent =
-      "Thanks. Your request is in. Our team will contact you shortly to confirm next steps.";
-    estimateForm.reset();
+    const note = form.querySelector(".form-note");
+
+    if (note) {
+      note.textContent =
+        "Thank you. Your estimate request was received, and our team will follow up shortly with next steps.";
+    }
+
+    form.reset();
   });
-}
+});
 
 // =========================
 // Chatbot Widget
@@ -54,11 +76,13 @@ const quickActionButtons = document.querySelectorAll(".chatbot-quick-actions but
 
 const cannedReplies = {
   estimate:
-    "Great question. We start with a free consultation, then provide a clear line-item estimate based on scope, materials, and timeline.",
+    "You can request a free estimate here or on our contact page. We typically schedule consultations within 2-4 business days, then provide a clear scope and pricing path.",
   areas:
-    "We currently serve Houston, Katy, Pearland, Sugar Land, Pasadena, and Cypress.",
+    "We serve Houston, Katy, Pearland, Sugar Land, Pasadena, and Cypress with route-based scheduling for faster response windows.",
   services:
-    "We offer Landscape Design, Lawn Maintenance, Outdoor Lighting, Irrigation Systems, Patio & Hardscaping, and Seasonal Cleanup."
+    "We provide Landscape Design, Lawn Maintenance, Outdoor Lighting, Irrigation & Drainage, Patio & Hardscaping, plus seasonal cleanup support.",
+  schedule:
+    "Our team provides confirmed scheduling windows and proactive timeline updates throughout your project."
 };
 
 function getTimestamp() {
@@ -67,16 +91,16 @@ function getTimestamp() {
 }
 
 function createMessageElement(text, type, timeText = getTimestamp()) {
-  const messageElement = document.createElement("div");
-  messageElement.className = `msg ${type}`;
-  messageElement.textContent = text;
+  const element = document.createElement("div");
+  element.className = `msg ${type}`;
+  element.textContent = text;
 
   const timeElement = document.createElement("span");
   timeElement.className = "msg-time";
   timeElement.textContent = timeText;
-  messageElement.appendChild(timeElement);
+  element.appendChild(timeElement);
 
-  return messageElement;
+  return element;
 }
 
 function addMessage(text, type) {
@@ -84,10 +108,10 @@ function addMessage(text, type) {
     return null;
   }
 
-  const messageElement = createMessageElement(text, type);
-  chatbotMessages.appendChild(messageElement);
+  const message = createMessageElement(text, type);
+  chatbotMessages.appendChild(message);
   chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-  return messageElement;
+  return message;
 }
 
 function addTypingIndicator() {
@@ -95,19 +119,19 @@ function addTypingIndicator() {
     return null;
   }
 
-  const typingElement = document.createElement("div");
-  typingElement.className = "msg bot typing";
-  typingElement.setAttribute("aria-hidden", "true");
+  const typing = document.createElement("div");
+  typing.className = "msg bot typing";
+  typing.setAttribute("aria-hidden", "true");
 
   for (let i = 0; i < 3; i += 1) {
     const dot = document.createElement("span");
     dot.className = "typing-dot";
-    typingElement.appendChild(dot);
+    typing.appendChild(dot);
   }
 
-  chatbotMessages.appendChild(typingElement);
+  chatbotMessages.appendChild(typing);
   chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-  return typingElement;
+  return typing;
 }
 
 function removeTypingIndicator(typingElement) {
@@ -125,28 +149,28 @@ function getResponse(userText) {
     return cannedReplies.estimate;
   }
 
-  if (text.includes("area") || text.includes("houston")) {
+  if (text.includes("area") || text.includes("houston") || text.includes("cypress")) {
     return cannedReplies.areas;
   }
 
-  if (text.includes("service") || text.includes("offer")) {
+  if (text.includes("service") || text.includes("offer") || text.includes("lighting")) {
     return cannedReplies.services;
   }
 
   if (text.includes("schedule") || text.includes("soon") || text.includes("book")) {
-    return "Most consultations are booked within 2-4 business days, and project start dates depend on scope and current queue.";
+    return cannedReplies.schedule;
   }
 
-  return "Happy to help. For exact pricing and timeline recommendations, submit the estimate form and our team will follow up with tailored options.";
+  return "Great question. Share details in our estimate form and we will send tailored recommendations for your property.";
 }
 
 function sendBotReply(reply) {
-  const typingElement = addTypingIndicator();
+  const typing = addTypingIndicator();
 
   window.setTimeout(() => {
-    removeTypingIndicator(typingElement);
+    removeTypingIndicator(typing);
     addMessage(reply, "bot");
-  }, 550);
+  }, 520);
 }
 
 function openChat() {
@@ -168,12 +192,12 @@ function closeChat() {
   chatbotToggle.setAttribute("aria-expanded", "false");
 }
 
-if (chatbotToggle) {
+if (chatbotToggle && chatbotPanel) {
   chatbotToggle.addEventListener("click", () => {
-    if (!chatbotPanel?.classList.contains("open")) {
-      openChat();
-    } else {
+    if (chatbotPanel.classList.contains("open")) {
       closeChat();
+    } else {
+      openChat();
     }
   });
 }
@@ -184,8 +208,8 @@ if (chatbotClose) {
 
 quickActionButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const questionType = button.dataset.question || "";
-    const reply = cannedReplies[questionType] || cannedReplies.estimate;
+    const type = button.dataset.question || "";
+    const reply = cannedReplies[type] || cannedReplies.estimate;
     addMessage(button.textContent || "Question", "user");
     sendBotReply(reply);
   });
@@ -208,6 +232,19 @@ if (chatbotForm && chatbotInput) {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && chatbotPanel?.classList.contains("open")) {
+    closeChat();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (!chatbotPanel || !chatbotToggle) {
+    return;
+  }
+
+  const clickedInsidePanel = chatbotPanel.contains(event.target);
+  const clickedToggle = chatbotToggle.contains(event.target);
+
+  if (!clickedInsidePanel && !clickedToggle && chatbotPanel.classList.contains("open")) {
     closeChat();
   }
 });
