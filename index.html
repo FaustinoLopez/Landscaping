@@ -23,7 +23,7 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="index.html" aria-label="Evergreen Outdoor Design Home">
-          <span class="brand-mark">EO</span>
+          <img class="brand-logo" src="images/logo.png" alt="Evergreen Outdoor Design logo" />
           <span class="brand-text">Evergreen<small>Outdoor Design</small></span>
         </a>
 
@@ -69,21 +69,57 @@
             </ul>
           </div>
 
-          <div class="hero-visual" aria-hidden="true">
-            <div class="stat-card stat-primary">
-              <h3>Recent Project</h3>
-              <p>River Oaks Front + Backyard Upgrade</p>
-              <span>Landscape Design + Lighting + Hardscape</span>
-            </div>
-            <div class="stat-card stat-secondary">
-              <strong>275+</strong>
-              <p>Houston Homes Improved</p>
-            </div>
-            <div class="stat-card stat-tertiary">
-              <strong>4.9 / 5</strong>
-              <p>Average Homeowner Rating</p>
-            </div>
+          <div class="consult-card card">
+            <div class="consult-visual" aria-hidden="true"></div>
+            <p class="eyebrow">Request Consultation</p>
+            <h3>Get a Free Property Consultation</h3>
+            <p>
+              Tell us about your project. We will follow up with service recommendations
+              and the soonest consultation window.
+            </p>
+            <form class="quick-form js-estimate-form">
+              <label for="home-name">Name</label>
+              <input id="home-name" name="name" type="text" placeholder="Full name" required />
+
+              <label for="home-phone">Phone</label>
+              <input id="home-phone" name="phone" type="tel" placeholder="(713) 555-0123" required />
+
+              <label for="home-service">Service</label>
+              <select id="home-service" name="service" required>
+                <option value="">Select service</option>
+                <option>Landscape Design</option>
+                <option>Lawn Maintenance</option>
+                <option>Outdoor Lighting</option>
+                <option>Irrigation &amp; Drainage</option>
+                <option>Patio &amp; Hardscaping</option>
+              </select>
+
+              <button class="btn btn-primary" type="submit">Request My Consultation</button>
+              <p class="form-note" aria-live="polite"></p>
+            </form>
           </div>
+        </div>
+      </section>
+
+      <!-- Social Proof Metrics -->
+      <section class="section metrics-strip">
+        <div class="container metrics-grid">
+          <article class="metric-item">
+            <strong>275+</strong>
+            <p>Houston-Area Projects Completed</p>
+          </article>
+          <article class="metric-item">
+            <strong>4.9 / 5</strong>
+            <p>Average Client Rating</p>
+          </article>
+          <article class="metric-item">
+            <strong>12+</strong>
+            <p>Years of Combined Field Experience</p>
+          </article>
+          <article class="metric-item">
+            <strong>98%</strong>
+            <p>Clients Who Refer or Rehire Us</p>
+          </article>
         </div>
       </section>
 
@@ -98,6 +134,12 @@
               is planned to solve real homeowner pain points while creating a more
               refined, high-value exterior.
             </p>
+            <ul class="pill-list">
+              <li>Single Family Homes</li>
+              <li>Townhomes</li>
+              <li>High-End Residential</li>
+              <li>Design + Build</li>
+            </ul>
           </div>
 
           <div class="grid-3">
@@ -155,6 +197,50 @@
                 and choose the right next step for your home's priorities.
               </p>
               <a class="service-link" href="services.html">Go to Services Hub</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Our Process</p>
+            <h2>A Clear 4-Step Process from Consultation to Long-Term Care</h2>
+          </div>
+          <div class="process-grid">
+            <article class="card process-step">
+              <span>01</span>
+              <h3>Consultation</h3>
+              <p>
+                We meet on-site, review your goals, and identify the highest-impact
+                upgrades for your property.
+              </p>
+            </article>
+            <article class="card process-step">
+              <span>02</span>
+              <h3>Design Plan</h3>
+              <p>
+                You get a clear design and scope recommendation with practical
+                sequencing and transparent pricing.
+              </p>
+            </article>
+            <article class="card process-step">
+              <span>03</span>
+              <h3>Installation</h3>
+              <p>
+                Our crews execute with clean workmanship, schedule discipline, and
+                proactive communication.
+              </p>
+            </article>
+            <article class="card process-step">
+              <span>04</span>
+              <h3>Ongoing Maintenance</h3>
+              <p>
+                Keep results sharp with tailored maintenance plans and seasonal updates
+                built for Houston conditions.
+              </p>
             </article>
           </div>
         </div>
