@@ -3,6 +3,7 @@
 // =========================
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
+const siteHeader = document.querySelector(".site-header");
 
 if (menuToggle && mainNav) {
   menuToggle.addEventListener("click", () => {
@@ -16,6 +17,15 @@ if (menuToggle && mainNav) {
       menuToggle.setAttribute("aria-expanded", "false");
     });
   });
+}
+
+if (siteHeader) {
+  const updateHeaderSize = () => {
+    siteHeader.classList.toggle("is-compact", window.scrollY > 36);
+  };
+
+  updateHeaderSize();
+  window.addEventListener("scroll", updateHeaderSize, { passive: true });
 }
 
 // =========================
@@ -73,6 +83,7 @@ const chatbotMessages = document.getElementById("chatbot-messages");
 const chatbotForm = document.getElementById("chatbot-form");
 const chatbotInput = document.getElementById("chatbot-input");
 const quickActionButtons = document.querySelectorAll(".chatbot-quick-actions button");
+const chatbotRoot = document.querySelector(".chatbot");
 
 const cannedReplies = {
   estimate:
@@ -190,6 +201,45 @@ function closeChat() {
 
   chatbotPanel.classList.remove("open");
   chatbotToggle.setAttribute("aria-expanded", "false");
+}
+
+if (chatbotRoot) {
+  // Force a stable bottom-right anchor even if CSS is stale or overridden.
+  const applyChatbotAnchor = () => {
+    const isMobile = window.matchMedia("(max-width: 760px)").matches;
+    const rightOffset = isMobile ? "0.75rem" : "1rem";
+    const bottomOffset = isMobile ? "0.75rem" : "1rem";
+    const panelBottomOffset = isMobile ? "4.15rem" : "4.5rem";
+
+    chatbotRoot.style.position = "fixed";
+    chatbotRoot.style.top = "auto";
+    chatbotRoot.style.left = "auto";
+    chatbotRoot.style.right = rightOffset;
+    chatbotRoot.style.bottom = bottomOffset;
+    chatbotRoot.style.zIndex = "9999";
+
+    if (chatbotToggle) {
+      chatbotToggle.style.position = "fixed";
+      chatbotToggle.style.top = "auto";
+      chatbotToggle.style.left = "auto";
+      chatbotToggle.style.right = rightOffset;
+      chatbotToggle.style.bottom = bottomOffset;
+      chatbotToggle.style.zIndex = "10001";
+    }
+
+    if (chatbotPanel) {
+      chatbotPanel.style.position = "fixed";
+      chatbotPanel.style.top = "auto";
+      chatbotPanel.style.left = "auto";
+      chatbotPanel.style.right = rightOffset;
+      chatbotPanel.style.bottom = panelBottomOffset;
+      chatbotPanel.style.marginTop = "0";
+      chatbotPanel.style.zIndex = "10000";
+    }
+  };
+
+  applyChatbotAnchor();
+  window.addEventListener("resize", applyChatbotAnchor);
 }
 
 if (chatbotToggle && chatbotPanel) {

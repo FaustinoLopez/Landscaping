@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="page-home">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- Header / Navigation -->
@@ -48,7 +48,7 @@
       <!-- Hero -->
       <section class="hero section">
         <div class="container hero-grid">
-          <div>
+          <div class="hero-copy">
             <p class="eyebrow">Houston's Premium Outdoor Team</p>
             <h1>Custom Landscaping &amp; Outdoor Living Spaces in Houston</h1>
             <p class="hero-subhead">
@@ -69,34 +69,49 @@
             </ul>
           </div>
 
-          <div class="consult-card card">
-            <div class="consult-visual" aria-hidden="true"></div>
-            <p class="eyebrow">Request Consultation</p>
-            <h3>Get a Free Property Consultation</h3>
-            <p>
-              Tell us about your project. We will follow up with service recommendations
-              and the soonest consultation window.
-            </p>
-            <form class="quick-form js-estimate-form">
-              <label for="home-name">Name</label>
-              <input id="home-name" name="name" type="text" placeholder="Full name" required />
+          <div class="hero-stage">
+            <div class="hero-showcase">
+              <div class="hero-showcase-main">
+                <span class="hero-floating-note">Custom planting, lighting, stone, and outdoor living</span>
+              </div>
+              <div class="hero-showcase-detail">
+                <p class="eyebrow">Outdoor Living Focus</p>
+                <h3>Designed to feel like an extension of the home</h3>
+                <p>
+                  From front-elevation curb appeal to layered backyard retreats, we
+                  plan outdoor spaces around beauty, comfort, and everyday use.
+                </p>
+              </div>
+            </div>
 
-              <label for="home-phone">Phone</label>
-              <input id="home-phone" name="phone" type="tel" placeholder="(713) 555-0123" required />
+            <div class="consult-card card">
+              <p class="eyebrow">Request Consultation</p>
+              <h3>Get a Free Property Consultation</h3>
+              <p>
+                Tell us about your project. We will follow up with service recommendations
+                and the soonest consultation window.
+              </p>
+              <form class="quick-form js-estimate-form">
+                <label for="home-name">Name</label>
+                <input id="home-name" name="name" type="text" placeholder="Full name" required />
 
-              <label for="home-service">Service</label>
-              <select id="home-service" name="service" required>
-                <option value="">Select service</option>
-                <option>Landscape Design</option>
-                <option>Lawn Maintenance</option>
-                <option>Outdoor Lighting</option>
-                <option>Irrigation &amp; Drainage</option>
-                <option>Patio &amp; Hardscaping</option>
-              </select>
+                <label for="home-phone">Phone</label>
+                <input id="home-phone" name="phone" type="tel" placeholder="(713) 555-0123" required />
 
-              <button class="btn btn-primary" type="submit">Request My Consultation</button>
-              <p class="form-note" aria-live="polite"></p>
-            </form>
+                <label for="home-service">Service</label>
+                <select id="home-service" name="service" required>
+                  <option value="">Select service</option>
+                  <option>Landscape Design</option>
+                  <option>Lawn Maintenance</option>
+                  <option>Outdoor Lighting</option>
+                  <option>Irrigation &amp; Drainage</option>
+                  <option>Patio &amp; Hardscaping</option>
+                </select>
+
+                <button class="btn btn-primary" type="submit">Request My Consultation</button>
+                <p class="form-note" aria-live="polite"></p>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -142,9 +157,10 @@
             </ul>
           </div>
 
-          <div class="grid-3">
-            <article class="card service-card">
+          <div class="service-editorial-grid">
+            <article class="service-story service-story-primary service-landscape">
               <span class="service-icon" aria-hidden="true">LD</span>
+              <p class="service-kicker">Signature Design</p>
               <h3>Landscape Design</h3>
               <p>
                 Cohesive layout plans, plant palettes, and material selections that
@@ -153,35 +169,10 @@
               </p>
               <a class="service-link" href="landscape-design.html">Learn More</a>
             </article>
-            <article class="card service-card">
-              <span class="service-icon" aria-hidden="true">LM</span>
-              <h3>Lawn Maintenance</h3>
-              <p>
-                Weekly turf and bed care with clean lines, proactive upkeep, and
-                dependable scheduling to keep your home consistently presentation-ready.
-              </p>
-              <a class="service-link" href="lawn-maintenance.html">Learn More</a>
-            </article>
-            <article class="card service-card">
-              <span class="service-icon" aria-hidden="true">OL</span>
-              <h3>Outdoor Lighting</h3>
-              <p>
-                Warm, balanced lighting plans that showcase architecture, improve
-                evening safety, and add premium curb presence after dark.
-              </p>
-              <a class="service-link" href="outdoor-lighting.html">Learn More</a>
-            </article>
-            <article class="card service-card">
-              <span class="service-icon" aria-hidden="true">ID</span>
-              <h3>Irrigation &amp; Drainage</h3>
-              <p>
-                Efficient irrigation zoning and drainage corrections that reduce water
-                waste and protect turf, planting beds, and foundation zones.
-              </p>
-              <a class="service-link" href="irrigation-drainage.html">Learn More</a>
-            </article>
-            <article class="card service-card">
+
+            <article class="service-story service-story-secondary service-patio">
               <span class="service-icon" aria-hidden="true">PH</span>
+              <p class="service-kicker">Entertaining Spaces</p>
               <h3>Patio &amp; Hardscaping</h3>
               <p>
                 Patios, walkways, and structural hardscape features designed for
@@ -189,86 +180,135 @@
               </p>
               <a class="service-link" href="patio-hardscaping.html">Learn More</a>
             </article>
-            <article class="card service-card">
-              <span class="service-icon" aria-hidden="true">SV</span>
-              <h3>View All Services</h3>
-              <p>
-                Explore detailed service pages to compare options, understand scope,
-                and choose the right next step for your home's priorities.
-              </p>
-              <a class="service-link" href="services.html">Go to Services Hub</a>
+
+            <article class="service-directory card">
+              <div class="service-directory-intro">
+                <p class="eyebrow">Supporting Services</p>
+                <h3>Every layer of the landscape working together</h3>
+                <p>
+                  The finished result feels elevated because maintenance, lighting,
+                  irrigation, and seasonal care are planned as part of the same
+                  residential experience.
+                </p>
+              </div>
+
+              <div class="service-directory-list">
+                <a class="service-row" href="lawn-maintenance.html">
+                  <span>Lawn Maintenance</span>
+                  <small>
+                    Weekly turf and bed care with dependable scheduling and refined curb
+                    appeal.
+                  </small>
+                </a>
+                <a class="service-row" href="outdoor-lighting.html">
+                  <span>Outdoor Lighting</span>
+                  <small>
+                    Warm, layered lighting that extends outdoor living well past sunset.
+                  </small>
+                </a>
+                <a class="service-row" href="irrigation-drainage.html">
+                  <span>Irrigation &amp; Drainage</span>
+                  <small>
+                    Hidden infrastructure that protects planting, turf, and long-term
+                    performance.
+                  </small>
+                </a>
+                <a class="service-row" href="services.html">
+                  <span>View All Services</span>
+                  <small>
+                    Compare scopes, priorities, and next steps inside the full service
+                    hub.
+                  </small>
+                </a>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
       <!-- Process -->
-      <section class="section">
+      <section class="section process-section">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">Our Process</p>
             <h2>A Clear 4-Step Process from Consultation to Long-Term Care</h2>
           </div>
-          <div class="process-grid">
-            <article class="card process-step">
-              <span>01</span>
-              <h3>Consultation</h3>
-              <p>
-                We meet on-site, review your goals, and identify the highest-impact
-                upgrades for your property.
-              </p>
-            </article>
-            <article class="card process-step">
-              <span>02</span>
-              <h3>Design Plan</h3>
-              <p>
-                You get a clear design and scope recommendation with practical
-                sequencing and transparent pricing.
-              </p>
-            </article>
-            <article class="card process-step">
-              <span>03</span>
-              <h3>Installation</h3>
-              <p>
-                Our crews execute with clean workmanship, schedule discipline, and
-                proactive communication.
-              </p>
-            </article>
-            <article class="card process-step">
-              <span>04</span>
-              <h3>Ongoing Maintenance</h3>
-              <p>
-                Keep results sharp with tailored maintenance plans and seasonal updates
-                built for Houston conditions.
-              </p>
-            </article>
+          <div class="process-editorial">
+            <div class="process-visual">
+              <div class="process-visual-card">
+                <p class="eyebrow">Concierge Experience</p>
+                <h3>Planned like a design project, executed like a premium build</h3>
+                <p>
+                  Homeowners get a clear path from vision to installation so the final
+                  landscape feels curated instead of pieced together.
+                </p>
+              </div>
+            </div>
+            <div class="process-grid">
+              <article class="process-step">
+                <span>01</span>
+                <h3>Consultation</h3>
+                <p>
+                  We meet on-site, review your goals, and identify the highest-impact
+                  upgrades for your property.
+                </p>
+              </article>
+              <article class="process-step">
+                <span>02</span>
+                <h3>Design Plan</h3>
+                <p>
+                  You get a clear design and scope recommendation with practical
+                  sequencing and transparent pricing.
+                </p>
+              </article>
+              <article class="process-step">
+                <span>03</span>
+                <h3>Installation</h3>
+                <p>
+                  Our crews execute with clean workmanship, schedule discipline, and
+                  proactive communication.
+                </p>
+              </article>
+              <article class="process-step">
+                <span>04</span>
+                <h3>Ongoing Maintenance</h3>
+                <p>
+                  Keep results sharp with tailored maintenance plans and seasonal updates
+                  built for Houston conditions.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Why Choose Us -->
-      <section class="section">
-        <div class="container">
+      <section class="section standards-section">
+        <div class="container standards-layout">
           <div class="section-head">
             <p class="eyebrow">Why Choose Evergreen</p>
             <h2>Professional Standards Homeowners Can Rely On</h2>
+            <p>
+              Premium landscaping depends on design judgment, clear field management,
+              and a property-wide view of how every element should work together.
+            </p>
           </div>
-          <div class="grid-3">
-            <article class="card">
+          <div class="grid-3 standards-grid">
+            <article class="card standard-card">
               <h3>Licensed &amp; Insured</h3>
               <p>
                 Your property is protected by fully insured crews and documented
                 quality standards from proposal through final walkthrough.
               </p>
             </article>
-            <article class="card">
+            <article class="card standard-card">
               <h3>Local Houston Expertise</h3>
               <p>
                 We design for Houston heat, rainfall patterns, and soil conditions so
                 your landscape performs in real local conditions year-round.
               </p>
             </article>
-            <article class="card">
+            <article class="card standard-card">
               <h3>Dependable Scheduling</h3>
               <p>
                 Punctual visits, clear timeline updates, and responsive communication
@@ -287,9 +327,9 @@
             <h2>Before-and-After Transformations Across Greater Houston</h2>
           </div>
 
-          <div class="projects-grid">
-            <article class="card project-card project-featured">
-              <div class="project-image">
+          <div class="project-story-grid">
+            <article class="project-story-card project-story-featured">
+              <div class="project-image project-image-featured">
                 <span class="tag">Before</span>
                 <span class="tag after">After</span>
                 <span class="project-badge">Curb Appeal +40%</span>
@@ -301,36 +341,39 @@
                   introduced a structured planting layout to deliver a sharper,
                   upscale first impression from the street.
                 </p>
+                <ul class="project-notes">
+                  <li>Front elevation rebalanced with structured planting layers</li>
+                  <li>Facade lighting added for warmer evening presence</li>
+                  <li>Street-facing arrival sequence designed to feel more intentional</li>
+                </ul>
               </div>
             </article>
-            <article class="card project-card">
-              <div class="project-image variant-two">
-                <span class="tag">Before</span>
-                <span class="tag after">After</span>
-                <span class="project-badge">Outdoor Living Upgrade</span>
-              </div>
-              <div class="project-copy">
-                <h3>Sugar Land Patio Expansion</h3>
-                <p>
-                  Expanded entertaining space with a premium paver layout, integrated
-                  planting pockets, and low-voltage lighting for evening gatherings.
-                </p>
-              </div>
-            </article>
-            <article class="card project-card">
-              <div class="project-image variant-three">
-                <span class="tag">Before</span>
-                <span class="tag after">After</span>
-                <span class="project-badge">Drainage Solved</span>
-              </div>
-              <div class="project-copy">
-                <h3>Katy Drainage Recovery Plan</h3>
-                <p>
-                  Corrected water flow routes and regraded turf zones to eliminate
-                  persistent pooling and restore full backyard usability.
-                </p>
-              </div>
-            </article>
+            <div class="project-story-stack">
+              <article class="project-story-card">
+                <div class="project-image variant-two">
+                  <span class="project-badge">Outdoor Living Upgrade</span>
+                </div>
+                <div class="project-copy">
+                  <h3>Sugar Land Patio Expansion</h3>
+                  <p>
+                    Expanded entertaining space with a premium paver layout, integrated
+                    planting pockets, and low-voltage lighting for evening gatherings.
+                  </p>
+                </div>
+              </article>
+              <article class="project-story-card">
+                <div class="project-image variant-three">
+                  <span class="project-badge">Drainage Solved</span>
+                </div>
+                <div class="project-copy">
+                  <h3>Katy Drainage Recovery Plan</h3>
+                  <p>
+                    Corrected water flow routes and regraded turf zones to eliminate
+                    persistent pooling and restore full backyard usability.
+                  </p>
+                </div>
+              </article>
+            </div>
           </div>
           <p style="margin-top: 1.25rem">
             <a class="btn btn-secondary" href="projects.html">View Full Project Portfolio</a>
