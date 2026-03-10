@@ -40,14 +40,14 @@
 
   --max-width: 1220px;
 
-  --page-hero-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1400&q=80");
-  --cta-image: url("https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=80");
+  --page-hero-image: url("images/landscape-design-houston.jpg");
+  --cta-image: url("images/patio-hardscaping-project.jpg");
 }
 
 /* ---------- Page Image Themes ---------- */
 .page-home {
-  --home-hero-image: url("https://images.unsplash.com/photo-1558521558-037f1cb02784?auto=format&fit=crop&w=1600&q=80");
-  --cta-image: url("https://images.unsplash.com/photo-1560749003-f4b1e17e2f06?auto=format&fit=crop&w=1200&q=80");
+  --home-hero-image: url("images/landscape-design-houston.jpg");
+  --cta-image: url("images/patio-hardscaping-project.jpg");
 }
 
 .page-about {
@@ -55,27 +55,27 @@
 }
 
 .page-services {
-  --page-hero-image: url("https://images.unsplash.com/photo-1558293842-c0fd3db86157?auto=format&fit=crop&w=1400&q=80");
+  --page-hero-image: url("images/patio-hardscaping-project.jpg");
 }
 
 .page-landscape-design {
-  --page-hero-image: url("https://images.unsplash.com/photo-1560749003-f4b1e17e2f06?auto=format&fit=crop&w=1400&q=80");
+  --page-hero-image: url("images/landscape-design-houston.jpg");
 }
 
 .page-lawn-maintenance {
-  --page-hero-image: url("https://images.unsplash.com/photo-1623746939731-f3d5f7c3c22d?auto=format&fit=crop&w=1400&q=80");
+  --page-hero-image: url("images/lawn-maintenance-service.jpg");
 }
 
 .page-outdoor-lighting {
-  --page-hero-image: url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80");
+  --page-hero-image: url("images/outdoor-lighting-pathway.jpg");
 }
 
 .page-irrigation-drainage {
-  --page-hero-image: url("https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1400&q=80");
+  --page-hero-image: url("images/irrigation-drainage-system.jpg");
 }
 
 .page-patio-hardscaping {
-  --page-hero-image: url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80");
+  --page-hero-image: url("images/patio-hardscaping-project.jpg");
 }
 
 .page-projects {
@@ -861,23 +861,23 @@ button {
 }
 
 .service-landscape {
-  --service-image: url("https://images.unsplash.com/photo-1560749003-f4b1e17e2f06?auto=format&fit=crop&w=1200&q=80");
+  --service-image: url("images/landscape-design-houston.jpg");
 }
 
 .service-lawn {
-  --service-image: url("https://images.unsplash.com/photo-1623746939731-f3d5f7c3c22d?auto=format&fit=crop&w=1200&q=80");
+  --service-image: url("images/lawn-maintenance-service.jpg");
 }
 
 .service-lighting {
-  --service-image: url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80");
+  --service-image: url("images/outdoor-lighting-pathway.jpg");
 }
 
 .service-irrigation {
-  --service-image: url("https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80");
+  --service-image: url("images/irrigation-drainage-system.jpg");
 }
 
 .service-patio {
-  --service-image: url("https://images.unsplash.com/photo-1558293842-c0fd3db86157?auto=format&fit=crop&w=1200&q=80");
+  --service-image: url("images/patio-hardscaping-project.jpg");
 }
 
 .service-hub {
@@ -974,8 +974,7 @@ button {
   border-radius: 30px;
   background:
     linear-gradient(180deg, rgba(18, 31, 25, 0.15), rgba(18, 31, 25, 0.42)),
-    url("https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1600&q=80")
-      center / cover no-repeat;
+    url("images/project-memorial-landscape-redesign.jpg") center / cover no-repeat;
 }
 
 .project-featured .project-image {
@@ -986,15 +985,13 @@ button {
 .project-image.variant-two {
   background:
     linear-gradient(180deg, rgba(18, 31, 25, 0.1), rgba(18, 31, 25, 0.35)),
-    url("https://images.unsplash.com/photo-1558293842-c0fd3db86157?auto=format&fit=crop&w=1600&q=80")
-      center / cover no-repeat;
+    url("images/project-sugarland-patio-hardscaping.jpg") center / cover no-repeat;
 }
 
 .project-image.variant-three {
   background:
     linear-gradient(180deg, rgba(18, 31, 25, 0.12), rgba(18, 31, 25, 0.38)),
-    url("https://images.unsplash.com/photo-1558521558-037f1cb02784?auto=format&fit=crop&w=1600&q=80")
-      center / cover no-repeat;
+    url("images/project-katy-irrigation-drainage.jpg") center / cover no-repeat;
 }
 
 .tag {
@@ -1221,37 +1218,37 @@ button {
 .gallery-visual.one {
   background-image:
     linear-gradient(180deg, rgba(15, 27, 22, 0.14), rgba(15, 27, 22, 0.34)),
-    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80");
+    url("images/project-memorial-landscape-redesign.jpg");
 }
 
 .gallery-visual.two {
   background-image:
     linear-gradient(180deg, rgba(15, 27, 22, 0.14), rgba(15, 27, 22, 0.34)),
-    url("https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80");
+    url("images/project-sugarland-patio-hardscaping.jpg");
 }
 
 .gallery-visual.three {
   background-image:
     linear-gradient(180deg, rgba(15, 27, 22, 0.14), rgba(15, 27, 22, 0.34)),
-    url("https://images.unsplash.com/photo-1560749003-f4b1e17e2f06?auto=format&fit=crop&w=1200&q=80");
+    url("images/project-katy-irrigation-drainage.jpg");
 }
 
 .gallery-visual.four {
   background-image:
     linear-gradient(180deg, rgba(15, 27, 22, 0.14), rgba(15, 27, 22, 0.34)),
-    url("https://images.unsplash.com/photo-1615707940590-118c63d9ef16?auto=format&fit=crop&w=1200&q=80");
+    url("images/project-pearland-outdoor-lighting.jpg");
 }
 
 .gallery-visual.five {
   background-image:
     linear-gradient(180deg, rgba(15, 27, 22, 0.14), rgba(15, 27, 22, 0.34)),
-    url("https://images.unsplash.com/photo-1591825729269-caeb344f6df2?auto=format&fit=crop&w=1200&q=80");
+    url("images/project-pasadena-lawn-refresh.jpg");
 }
 
 .gallery-visual.six {
   background-image:
     linear-gradient(180deg, rgba(15, 27, 22, 0.14), rgba(15, 27, 22, 0.34)),
-    url("https://images.unsplash.com/photo-1563291074-2bf8677ac0f5?auto=format&fit=crop&w=1200&q=80");
+    url("images/project-cypress-landscape-install.jpg");
 }
 
 .gallery-copy {
@@ -3293,5 +3290,510 @@ body {
   .page-projects .project-journal-copy,
   .page-projects .project-journal-entry.reverse .project-journal-copy {
     margin: -2.4rem 0.8rem 0;
+  }
+}
+
+/* ---------- J) Layout Stability Fixes ---------- */
+.section {
+  padding-block: clamp(5rem, 8.2vw, 7.4rem);
+}
+
+.hero-showcase-detail {
+  position: relative;
+  z-index: 2;
+  margin-left: -2.2rem;
+}
+
+.page-home .service-story-secondary {
+  margin-top: 2.8rem;
+}
+
+.page-home .service-directory {
+  grid-column: 1 / -1;
+  gap: clamp(1.2rem, 3vw, 2rem);
+}
+
+.page-home .project-story-grid {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.page-home .project-story-featured {
+  grid-column: span 8;
+  min-height: clamp(620px, 68vw, 760px);
+}
+
+.page-home .project-story-featured .project-image {
+  min-height: clamp(620px, 68vw, 760px);
+}
+
+.page-home .project-story-stack {
+  grid-column: span 4;
+  margin-top: 3.2rem;
+}
+
+.page-home .project-story-stack .project-copy {
+  margin: -2rem 0.8rem 0 1rem;
+}
+
+.page-home .project-story-stack .project-story-card:nth-child(2) {
+  margin-left: 0;
+}
+
+.page-projects .project-journal-entry,
+.page-projects .project-journal-entry.reverse {
+  gap: clamp(1.2rem, 3vw, 2rem);
+  overflow: hidden;
+}
+
+.page-projects .project-journal-copy,
+.page-projects .project-journal-entry.reverse .project-journal-copy {
+  margin: 0;
+}
+
+.page-projects .project-journal-entry .gallery-visual {
+  min-height: 520px;
+}
+
+.page-projects .project-snapshot-card .gallery-copy {
+  margin: -2rem 0.8rem 0 1rem;
+}
+
+@media (max-width: 1120px) {
+  .hero-showcase-detail {
+    margin-left: 0;
+  }
+
+  .page-home .project-story-featured,
+  .page-home .project-story-featured .project-image {
+    min-height: 560px;
+  }
+
+  .page-projects .project-journal-entry .gallery-visual {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding-block: clamp(4rem, 9vw, 5.4rem);
+  }
+
+  .page-home .project-story-featured,
+  .page-home .project-story-featured .project-image {
+    min-height: 500px;
+  }
+
+  .page-home .project-story-stack .project-copy,
+  .page-projects .project-snapshot-card .gallery-copy {
+    margin: -1.6rem 0.7rem 0;
+  }
+}
+
+/* ---------- K) Readability + Spacing Guardrails ---------- */
+.hero-showcase-main,
+.project-image,
+.gallery-visual {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-showcase-detail,
+.project-story-card:not(.project-story-featured) .project-copy,
+.project-snapshot-card .gallery-copy,
+.gallery-card:not(.gallery-card-featured) .gallery-copy,
+.project-card:not(.project-featured) .project-copy,
+.project-journal-copy {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-showcase-detail {
+  margin-left: 0;
+  margin-top: 0;
+  max-width: 28rem;
+}
+
+.consult-card {
+  margin-top: -1.5rem;
+}
+
+.page-home .service-story-secondary {
+  margin-top: clamp(1.1rem, 2.2vw, 1.9rem);
+}
+
+.page-home .project-story-stack {
+  margin-top: clamp(1.2rem, 2.6vw, 2.2rem);
+}
+
+.project-story-card:not(.project-story-featured) .project-copy {
+  margin: -1.2rem 0.9rem 0;
+}
+
+.page-home .project-story-stack .project-copy,
+.project-snapshot-card .gallery-copy,
+.gallery-card:not(.gallery-card-featured) .gallery-copy,
+.project-card:not(.project-featured) .project-copy {
+  margin: -1rem 0.85rem 0;
+}
+
+.service-editorial-grid,
+.project-story-grid,
+.project-journal,
+.project-snapshot-grid {
+  row-gap: clamp(1.2rem, 2.6vw, 2rem);
+}
+
+.page-projects .project-snapshot-card:nth-child(2),
+.page-projects .project-snapshot-card:nth-child(4) {
+  margin-top: 1rem;
+}
+
+@media (max-width: 1120px) {
+  .hero-showcase-detail {
+    margin: 0;
+    max-width: none;
+  }
+
+  .consult-card {
+    margin-top: 0;
+  }
+
+  .project-story-card:not(.project-story-featured) .project-copy,
+  .project-snapshot-card .gallery-copy,
+  .gallery-card:not(.gallery-card-featured) .gallery-copy,
+  .project-card:not(.project-featured) .project-copy {
+    margin: -0.7rem 0.65rem 0;
+  }
+
+  .page-projects .project-snapshot-card:nth-child(2),
+  .page-projects .project-snapshot-card:nth-child(4) {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-showcase-detail {
+    margin: 0.9rem 0 0;
+  }
+
+  .project-story-card:not(.project-story-featured) .project-copy,
+  .project-snapshot-card .gallery-copy,
+  .gallery-card:not(.gallery-card-featured) .gallery-copy,
+  .project-card:not(.project-featured) .project-copy {
+    margin: 0.7rem 0 0;
+  }
+
+  .service-editorial-grid,
+  .project-story-grid,
+  .project-journal,
+  .project-snapshot-grid {
+    row-gap: 1.1rem;
+  }
+}
+
+/* ---------- L) Intentional Service + Project Media ---------- */
+.service-story {
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.service-story-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.service-story-primary .service-story-image {
+  object-position: center 54%;
+}
+
+.service-story-secondary .service-story-image {
+  object-position: center 48%;
+}
+
+.service-story::before {
+  background: linear-gradient(180deg, rgba(9, 9, 8, 0.12), rgba(9, 9, 8, 0.82));
+}
+
+.service-row {
+  gap: 0.55rem;
+  align-content: start;
+}
+
+.service-row-image {
+  width: 100%;
+  height: clamp(130px, 15vw, 170px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  margin-bottom: 0.25rem;
+  box-shadow: 0 12px 30px rgba(17, 16, 14, 0.12);
+}
+
+.project-image,
+.gallery-visual {
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.project-image-media,
+.gallery-image-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.project-image::before,
+.gallery-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(12, 12, 11, 0.06), rgba(12, 12, 11, 0.42));
+}
+
+.project-image > *:not(.project-image-media) {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 760px) {
+  .service-row-image {
+    height: 150px;
+  }
+}
+
+/* ---------- M) Editorial Asymmetry Push ---------- */
+.page-home .consult-card {
+  border: 0;
+  border-left: 2px solid rgba(180, 122, 77, 0.72);
+  border-radius: 0;
+  background: linear-gradient(180deg, rgba(249, 245, 238, 0.78), rgba(249, 245, 238, 0.44));
+  box-shadow: none;
+  backdrop-filter: blur(0);
+}
+
+.page-home .service-editorial-grid {
+  gap: clamp(1.8rem, 4vw, 3.4rem);
+}
+
+.page-home .service-story-primary {
+  grid-column: span 7;
+  min-height: clamp(700px, 74vw, 900px);
+}
+
+.page-home .service-story-secondary {
+  grid-column: span 5;
+  min-height: clamp(560px, 56vw, 680px);
+  margin-top: clamp(2rem, 6vw, 6rem);
+}
+
+.page-home .service-directory {
+  margin-top: 0.2rem;
+}
+
+.page-home .service-row {
+  grid-template-columns: minmax(165px, 210px) minmax(0, 1fr);
+  column-gap: 1.1rem;
+  align-items: center;
+  padding: 1.35rem 0 1.35rem 1rem;
+}
+
+.page-home .service-row::before {
+  display: none;
+}
+
+.page-home .service-row-image {
+  grid-row: 1 / span 2;
+  height: clamp(120px, 13vw, 150px);
+  margin: 0;
+}
+
+.page-home .service-row span,
+.page-home .service-row small {
+  grid-column: 2;
+}
+
+.page-home .service-row span {
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
+}
+
+.home-projects-spotlight {
+  background:
+    radial-gradient(760px 380px at 5% 10%, rgba(180, 122, 77, 0.17), transparent),
+    linear-gradient(180deg, #141311 0%, #1a1815 42%, #13120f 100%);
+}
+
+.home-projects-spotlight::before {
+  display: none;
+}
+
+.home-projects-spotlight .container {
+  width: min(100% - 2rem, 1360px);
+}
+
+.home-projects-spotlight .section-head .eyebrow,
+.home-projects-spotlight .section-head h2 {
+  color: #f5f2ec;
+}
+
+.home-projects-spotlight .section-head .eyebrow::before {
+  background: rgba(245, 242, 236, 0.56);
+}
+
+.home-projects-spotlight .project-story-grid {
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  gap: clamp(1.6rem, 3.2vw, 2.8rem);
+  align-items: end;
+}
+
+.home-projects-spotlight .project-story-featured {
+  grid-column: span 11;
+  min-height: clamp(760px, 78vw, 960px);
+  border-radius: 8px;
+}
+
+.home-projects-spotlight .project-story-featured .project-image {
+  min-height: clamp(760px, 78vw, 960px);
+  border-radius: 8px;
+}
+
+.home-projects-spotlight .project-story-featured .project-copy {
+  max-width: 56rem;
+  padding: clamp(2.2rem, 4vw, 3.4rem);
+  background: linear-gradient(180deg, rgba(8, 8, 7, 0), rgba(8, 8, 7, 0.92));
+}
+
+.home-projects-spotlight .project-story-stack {
+  grid-column: span 5;
+  margin-top: clamp(3.2rem, 8vw, 8.8rem);
+  gap: 2.1rem;
+}
+
+.home-projects-spotlight .project-story-stack .project-image {
+  min-height: 360px;
+  border-radius: 8px;
+}
+
+.home-projects-spotlight .project-story-stack .project-copy {
+  margin: -0.65rem 0 0;
+  padding: 0.6rem 0 0;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-projects-spotlight .project-story-stack .project-copy h3,
+.home-projects-spotlight .project-story-stack .project-copy p {
+  color: rgba(245, 242, 236, 0.95);
+}
+
+.home-projects-spotlight .btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5f2ec;
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+@media (max-width: 1120px) {
+  .page-home .service-row {
+    grid-template-columns: 1fr;
+    row-gap: 0.55rem;
+    padding-left: 0.6rem;
+  }
+
+  .page-home .service-row-image,
+  .page-home .service-row span,
+  .page-home .service-row small {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .page-home .service-row-image {
+    height: 170px;
+  }
+
+  .home-projects-spotlight .project-story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-projects-spotlight .project-story-featured,
+  .home-projects-spotlight .project-story-featured .project-image,
+  .home-projects-spotlight .project-story-stack {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+
+  .home-projects-spotlight .project-story-featured,
+  .home-projects-spotlight .project-story-featured .project-image {
+    min-height: 620px;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-projects-spotlight .project-story-featured,
+  .home-projects-spotlight .project-story-featured .project-image {
+    min-height: 500px;
+  }
+
+  .home-projects-spotlight .project-story-stack .project-copy {
+    margin-top: 0.45rem;
+  }
+}
+
+/* ---------- N) Hero Overlap + Space Efficiency ---------- */
+.page-home .hero-copy {
+  min-width: 0;
+}
+
+.page-home .hero-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 1fr);
+  gap: clamp(1.4rem, 2.8vw, 2.4rem);
+}
+
+.page-home .hero h1 {
+  max-width: 10.5ch;
+  font-size: clamp(2.8rem, 4.9vw, 5rem);
+  line-height: 0.98;
+}
+
+@media (min-width: 1200px) {
+  .page-home .hero-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+    gap: clamp(1.2rem, 2.4vw, 2rem);
+    align-items: start;
+  }
+
+  .page-home .hero-copy {
+    padding-top: 1.2rem;
+  }
+
+  .page-home .hero h1 {
+    max-width: 10.5ch;
+    font-size: clamp(2.9rem, 5.2vw, 5.35rem);
+    line-height: 0.98;
+  }
+
+  .page-home .hero-stage {
+    padding-left: clamp(0rem, 1.2vw, 1rem);
+  }
+
+  .page-home .hero-showcase {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 270px);
+    gap: 0.95rem;
+  }
+
+  .page-home .hero-showcase-main {
+    min-height: clamp(560px, 58vw, 700px);
   }
 }
