@@ -20,12 +20,38 @@ if (menuToggle && mainNav) {
 }
 
 if (siteHeader) {
-  const updateHeaderSize = () => {
-    siteHeader.classList.toggle("is-compact", window.scrollY > 36);
+  const COMPACT_ON_SCROLL_Y = 84;
+  const COMPACT_OFF_SCROLL_Y = 32;
+  let isCompact = false;
+  let ticking = false;
+
+  const updateHeaderSize = (force = false) => {
+    const scrollY = window.scrollY || window.pageYOffset || 0;
+    const nextCompactState = isCompact ? scrollY > COMPACT_OFF_SCROLL_Y : scrollY > COMPACT_ON_SCROLL_Y;
+
+    if (!force && nextCompactState === isCompact) {
+      return;
+    }
+
+    isCompact = nextCompactState;
+    siteHeader.classList.toggle("is-compact", isCompact);
   };
 
-  updateHeaderSize();
-  window.addEventListener("scroll", updateHeaderSize, { passive: true });
+  const onScroll = () => {
+    if (ticking) {
+      return;
+    }
+
+    ticking = true;
+    window.requestAnimationFrame(() => {
+      updateHeaderSize();
+      ticking = false;
+    });
+  };
+
+  updateHeaderSize(true);
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", () => updateHeaderSize(true), { passive: true });
 }
 
 // =========================
@@ -189,6 +215,7 @@ function openChat() {
     return;
   }
 
+  chatbotRoot?.classList.add("is-open");
   chatbotPanel.classList.add("open");
   chatbotToggle.setAttribute("aria-expanded", "true");
   chatbotInput?.focus();
@@ -199,6 +226,7 @@ function closeChat() {
     return;
   }
 
+  chatbotRoot?.classList.remove("is-open");
   chatbotPanel.classList.remove("open");
   chatbotToggle.setAttribute("aria-expanded", "false");
 }
