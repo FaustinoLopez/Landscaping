@@ -83,19 +83,65 @@ if (yearElement) {
 }
 
 // =========================
-// Form Submission Demo
+// Estimate Form Mailto Fallback
 // =========================
+const ESTIMATE_EMAIL = "hello@evergreenoutdoordesign.com";
+
+function getFieldLabel(form, fieldName) {
+  const field = form.elements.namedItem(fieldName);
+
+  if (field && "id" in field && field.id) {
+    const linkedLabel = form.querySelector(`label[for="${field.id}"]`);
+    if (linkedLabel) {
+      return linkedLabel.textContent.trim().replace(/\s+/g, " ");
+    }
+  }
+
+  return fieldName
+    .replace(/[-_]/g, " ")
+    .replace(/\b\w/g, (character) => character.toUpperCase());
+}
+
+function buildEstimateMailto(form) {
+  const formData = new FormData(form);
+  const service = String(formData.get("service") || "Website Inquiry").trim();
+  const subject = `Estimate Request: ${service || "Website Inquiry"}`;
+  const bodyLines = [
+    `Page: ${document.title}`,
+    `URL: ${window.location.href}`,
+    ""
+  ];
+
+  for (const [name, rawValue] of formData.entries()) {
+    const value = String(rawValue).trim();
+    if (!value) {
+      continue;
+    }
+
+    bodyLines.push(`${getFieldLabel(form, name)}: ${value}`);
+  }
+
+  bodyLines.push("", "Submitted from the Evergreen Outdoor Design website.");
+
+  return `mailto:${ESTIMATE_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+}
+
 document.querySelectorAll(".js-estimate-form").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    if (!form.reportValidity()) {
+      return;
+    }
+
     const note = form.querySelector(".form-note");
 
     if (note) {
       note.textContent =
-        "Thank you. Your estimate request was received, and our team will follow up shortly with next steps.";
+        "Opening your email app with a pre-filled estimate request. If nothing opens, email hello@evergreenoutdoordesign.com or call (713) 555-0148.";
     }
 
-    form.reset();
+    window.location.href = buildEstimateMailto(form);
   });
 });
 
